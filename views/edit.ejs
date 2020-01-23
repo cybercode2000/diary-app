@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>update a document</h1>
+    
+    <form action="/<%= coming %>/update" method="POST" class="container">
+        <%if(typeof success !== 'undefined') {%>
+           <% success.forEach(suc => { %>
+                <div style="font-size: 16px" class="alert alert-success fade show" role="alert"><%= suc.msg %> </div>
+           <% }) %>
+        <% } %>
+        <%if(typeof error !== 'undefined') {%>
+            <% error.forEach(err => { %>
+                 <div style="font-size: 16px" class="alert alert-danger fade show" role="alert"><%= err.msg %> </div>
+            <% }) %>
+         <% } %>
+        <input name="docname" type="text" value="<%= coming %>">
+        <br><label  class="mt-3 text-capitalize" for="">enter the text here</label><br>
+        <textarea name="text"><%= m %>
+        </textarea><br>
+        <button class="btn btn-outline-primary">Save the file</button>
+    </form>
+
+</body>
+</html>

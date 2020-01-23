@@ -1,0 +1,18 @@
+{
+  "name": "tasklist",
+  "version": "1.0.0",
+  "description": "tasklist with file system modules",
+  "main": "server.js",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "cybercode",
+  "license": "ISC"
+}

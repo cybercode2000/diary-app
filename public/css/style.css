@@ -1,0 +1,63 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+
+.left {
+    background: linear-gradient(rgba(52,152,219, .6), rgba(52,152,219, .6)), url('/images/person-writing-on-notebook-while-holding-coffee-mug-3278757.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;   
+}
+
+.form-holder{
+    position: relative;
+    margin-bottom: 20px
+}
+
+.form-holder span{
+    position:absolute;
+    left:2%;
+    top:50%;
+    transform:translateY(-55%);
+    font-size:15px;
+    color:#666
+}
+
+.form-control{
+    border: none;
+    border: 1px solid rgb(167, 166, 166);
+    display: block;
+    width: 100%;
+    height: 48px;
+    padding: 3px 33px 0;
+    color: #666;
+    font-family: san-serif;
+    font-size: 18px
+}
+
+.bua {
+    width: 100%;
+    height: 48px;
+    border-radius: 0px;
+    font-size: 18px;
+    background:rgb(52,152,219);
+    border: none;
+}
+
+.one {
+    font-weight: bold;
+    color: #666;
+}
+.two {
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgb(52,152,219);
+    
+}

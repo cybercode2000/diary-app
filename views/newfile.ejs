@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <form action="/newfile" method="POST" class="container">
+        <h1 class="text-capitalize">add a new text document</h1>
+        <%if(typeof success !== 'undefined') {%>
+           <% success.forEach(suc => { %>
+                <div style="font-size: 16px" class="alert alert-success fade show" role="alert"><%= suc.msg %> </div>
+           <% }) %>
+        <% } %>
+        <%if(typeof error !== 'undefined') {%>
+            <% error.forEach(err => { %>
+                 <div style="font-size: 16px" class="alert alert-danger fade show" role="alert"><%= err.msg %> </div>
+            <% }) %>
+         <% } %>
+        <input name="docname" type="text" placeholder="enter the name of the file">
+        <br><label  class="mt-3 text-capitalize" for="">enter the text here</label><br>
+        <textarea name="text">
+            
+        </textarea><br>
+        <button class="btn btn-outline-primary">Save the file</button>
+    </form>
+</body>
+</html>
