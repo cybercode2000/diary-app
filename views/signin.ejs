@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/linearicons/style.css">
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Sign up - Online Diary</title>
+    <title>Login - Online Diary App</title>
 </head>
 <body>
     <div>
@@ -38,40 +38,35 @@
                     </div>
                </div>
                <div class="col-4 right">
-                   <div class="container">
-                       <h2 class="text-uppercase mt-5 font-weight-bold text-center">Sign up for free</h2>
-                       <form action="/signup" method="POST" class="container mt-4">
-
+                   <div class="container mt-5">
+                       <h2 class="text-uppercase mt-5 font-weight-bold text-center">Login</h2>
+                       <form action="/login" method="POST" class="container mt-5">
+                        <% if(messages.error) { %>
+                            <div class="alert alert-danger" role="alert"><%= messages.error %> </div>
+                        <% } %>
+                        <% if(typeof success !== 'undefined') { %>
+                            <% success.forEach(function(err) { %>
+                        <div style="font-size: 13px" class="text-capitalize alert alert-success fade show" role="alert"><%= err.msg %> </div>
+                        <% }); %>
+                        <% } %>
                         <% if(typeof error !== 'undefined') { %>
                             <% error.forEach(function(err) { %>
                         <div style="font-size: 14px" class="text-capitalize alert alert-danger fade show" role="alert"><%= err.msg %> </div>
                         <% }); %>
                         <% } %>
-
-                        <div class="form-holder">
-                                <span class="lnr lnr-user"></span>
-                                <input type="text" class="form-control" placeholder="First Name" name="fname" id="fname" required>
-                            </div>
-                            <div class="form-holder">
-                                <span class="lnr lnr-user"></span>
-                                <input type="text" class="form-control" placeholder="Last Name" name="lname" id="lname" required>
-                            </div>
                             <div class="form-holder">
                                 <span class="lnr lnr-envelope"></span>
-                                <input type="email" class="form-control" placeholder="Email" name="email" id="email" required>
-                            </div>
-                            <div class="form-holder">
-                                <span class="lnr lnr-phone-handset"></span>
-                                <input type="number" class="form-control" placeholder="Phone" name="phone" id="phone" required>
+                                <input type="email" class="form-control" placeholder="Email" name="email" required>
                             </div>
                             <div class="form-holder">
                                 <span class="lnr lnr-lock"></span>
-                                <input type="password" class="form-control" placeholder="Password" name="password" id="password" required>
+                                <input type="password" class="form-control" placeholder="Password" name="password" required>
                             </div>
-                                <button class="mb-4 btn btn-primary bua">Sign up</button>
+                                <button class="mb-4 btn btn-primary bua">Login</button>
+
                             <div>
                                 <div><span class="one">Forgot Password?</span> <span class="two"><a href="">Click here</a></span></div>
-                                <div><span class="one">Have an Account?</span> <span class="two"><a href="/login">Sign in</a></span></div>
+                                <div><span class="one">Haven't Created account?</span> <span class="two"><a href="/signup">Sign up</a></span></div>
                             </div>
                        </form>
                    </div>
@@ -80,6 +75,5 @@
        </div>
     </div>
 
-    <script src="/js/main.js"></script>
 </body>
 </html>

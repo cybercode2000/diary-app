@@ -2,6 +2,7 @@ body {
     margin: 0px;
     padding: 0px;
     width: 100%;
+    font-family: sans-serif;
 }
 
 
@@ -15,7 +16,8 @@ body {
 
 .form-holder{
     position: relative;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    font-family: sans-serif;
 }
 
 .form-holder span{
